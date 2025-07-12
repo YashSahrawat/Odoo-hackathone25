@@ -1,0 +1,315 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif  !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+/* navbar */
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-hotel{
+    color: #fe424d;
+    font-size: 1.5rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+/* footer */
+.footer-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.footer-info-links a:hover{
+    text-decoration: underline;
+}
+.footer-info{
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    height: 8rem;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #ebebeb;
+}
+.footer-socials,
+.footer-info-links,
+.f-brandname{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-socials i{
+    margin-right: 2rem;
+    font-size: 1.25rem;
+}
+
+/* cards */
+
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+  }
+  .card{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  .card-anchor{
+    text-decoration: none;
+  }
+
+  /* edit page */
+.e-des{
+    width: 4rem;
+}
+  
+/* show page */
+.card{
+    width: 28rem;
+    margin-top: 2rem;
+}
+.show-card{
+    display: flex;
+    justify-content: center;
+}
+#review{
+    width: 450px;
+    margin: 0 auto;
+}
+#reviewCard{
+    background-color: #fdeaea;  /* soft rose red */
+}
+
+.custom-alert {
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+
+#signup{
+    background-color: #fdf6f6;
+}
+  
+/* Make stars smaller inside the comment card */
+#reviewCard .starability-result {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  display: block;
+  transform: scale(0.7);
+  width: min-content;
+}
+#image_show{
+    width: 100%;
+    height: auto;
+}
+
+#map { 
+    height: 400px;
+    width: 80vh;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+/* Card Background & Text */
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+}
+
+.dark-mode .card-title,
+.dark-mode .card-text,
+.dark-mode .text-muted {
+  color: #e2e2e2 !important;
+}
+
+/* Navbar or other light backgrounds */
+.dark-mode .bg-white {
+  background-color: #1f1f1f !important;
+}
+
+/* Button overrides */
+.dark-mode .btn-outline-danger {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.dark-mode .btn-outline-danger:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.login_darkmode{
+    margin-right: 2rem;
+}
+.dark_mode{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.3rem;
+    margin-right: 1rem;
+}
+.row{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+/* Dark mode for search bar */
+.dark-mode #searchBar {
+  background-color: #2c2c2c;
+}
+
+.dark-mode #searchBar input {
+  background-color: #2c2c2c;
+  color: #f8f9fa;
+}
+
+.dark-mode #searchBar input::placeholder {
+  color: #ccc;
+}
+
+.dark-mode #searchBar .btn {
+  background-color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+.search-bar{
+    width: 500px;
+}
+
+/* Footer dark mode styling */
+.dark-mode #footer {
+  background-color: #000 !important;
+  color: #f8f9fa !important;
+}
+
+.dark-mode #footer a {
+  color: #ccc !important;
+}
+
+.dark-mode #footer a:hover {
+  color: #fff !important;
+}
+#footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Dark Mode Styles */
+.dark-mode #reviewCard {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444;
+}
+
+.dark-mode #reviewCard .card-text {
+  color: #cccccc !important;
+}
+
+.dark-mode #reviewCard .btn {
+  background-color: #ff4d4d !important;
+  border: none;
+}
+#reviewCard {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+  #filters{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   border-radius: 1rem;
+  }
+.filter {
+  text-align: center;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.filter:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+ 
+  .filter p{
+    font-size: 0.8rem;
+  }
+  .form-check-input:checked {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+
+  .form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* red focus ring */
+  }
+
+  .form-check-input {
+    cursor: pointer;
+  }
+
+  .form-check-label {
+    cursor: pointer;
+    color: #dc3545; /* red label text */
+  }
+  body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+/* Card Background & Text */
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+}
+
+.dark-mode .card-title,
+.dark-mode .card-text,
+.dark-mode .text-muted {
+  color: #e2e2e2 !important;
+}
+
+/* Navbar or other light backgrounds */
+.dark-mode .bg-white {
+  background-color: #1f1f1f !important;
+}
+
+/* Button overrides */
+.dark-mode .btn-outline-danger {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.dark-mode .btn-outline-danger:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+/* Filter Icons & Text in Dark Mode */
+.dark-mode #filters .filter a,
+.dark-mode #filters .filter p {
+  color: #f8f9fa !important;
+}
+
+/* Optional: Slight icon glow or hover effect */
+.dark-mode #filters .filter a:hover,
+.dark-mode #filters .filter p:hover {
+  color: #ff6b6b !important;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
