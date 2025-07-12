@@ -1,0 +1,58 @@
+<% layout('layouts/boilerplate') -%>
+<body>
+<div class="row">
+  <div class="col-8 offset-2">
+    <br>
+    <h2>Sell Your Clothes</h2>
+    <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="name" class="form-label">Product name</label>
+        <input name="listing[name]" placeholder="Enter Product name" class="form-control" type="text" required>
+        <div class="invalid-feedback">Please enter a valid Product name</div>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]" placeholder="Enter description" class="form-control" required>
+        </textarea>
+        <div class="invalid-feedback">Please enter a valid description</div>
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input name="listing[image]" placeholder="Enter image URL/link" class="form-control" type="file" required>
+    </div>
+    <div class="row">
+    <div class="mb-3 col-md-4">
+        <label for="points" class="form-label">Points</label>
+        <input name="listing[points]" placeholder="20" class="form-control" required>
+        <div class="invalid-feedback">Please enter a valid Points</div>
+    </div>
+     <div class="mb-3 col-md-8">
+    <label for="category" class="form-label">Category</label>
+    <select name="listing[category]" class="form-select" required>
+      <option value="" disabled selected>Select category</option>
+      <option value="T-Shirts">T-Shirts</option>
+      <option value="Shirts">Shirts</option>
+      <option value="Trousers">Trousers</option>
+      <option value="Jeans">Jeans</option>
+      <option value="Hoodie">Hoodie</option>
+      <option value="Footwear">Footwear</option>
+    </select>
+    <div class="invalid-feedback">Please select a valid category</div>
+  </div>
+
+       <div class="mb-3 col-md-4">
+        <label for="location" class="form-label">Location</label>
+        <input name="listing[location]" placeholder="Vadodara, Gujarat" class="form-control" required>
+        <div class="invalid-feedback">Please enter a valid location</div>
+    </div>
+     
+     <!--  -->
+   
+  </div>
+  
+        <button class="btn btn-danger rounded-pill px-4 py-2 mb-3"> Sell </button>
+        <br>
+    </form>
+  </div>
+</div>
+</body>

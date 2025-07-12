@@ -1,0 +1,58 @@
+<% layout('layouts/boilerplate') -%>
+
+<div id="filters" class="d-flex px-5 py-2 gap-3 bg-white">
+
+    <div class="filter">
+   <a href="/listings?category=T-Shirts"class="text-dark text-decoration-none">
+    <p>T-Shirts</p></a>
+  </div>
+
+  <div class="filter">
+    
+   <a href="/listings?category=Shirts"  class="text-dark text-decoration-none">
+    <p>Shirts</p></a>
+  </div>
+
+  <div class="filter">
+     <a href="/listings?category=Trousers"  class="text-dark text-decoration-none">
+    <p>Trousers</p></a>
+  </div>
+
+  <div class="filter">
+     <a href="/listings?category=Jeans"  class="text-dark text-decoration-none">
+    <p>Jeans</p></a>
+  </div>
+
+  <div class="filter">
+    <a href="/listings?category=Hoodie" class="text-dark text-decoration-none">
+    <p>Hoodie</p></a>
+  </div>
+
+  <div class="filter">
+     <a href="/listings?category=Footwear" class="text-dark text-decoration-none">
+    <p>Footwear</p></a>
+  </div>
+
+</div>
+
+<div class="row mt-4 px-4">
+  <% for (let listing of allListings) { %>
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm rounded-4 border-0" style="width: 100%;">
+        <img src="<%= listing.image.url %>" class="card-img-top rounded-top-4" alt="listing_image" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title mb-1 text-dark fw-semibold"><%= listing.name %></h5>
+          <p class="text-muted small mb-2">
+            <i class="bi bi-geo-alt-fill"></i> <%= listing.location %>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span><%= listing.points %>P</span>
+            <a href="/listings/<%= listing._id %>" class="btn btn-outline-danger btn-sm rounded-pill">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+</div>
+      
+

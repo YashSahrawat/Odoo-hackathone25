@@ -1,0 +1,59 @@
+<% layout('layouts/boilerplate') -%>
+<body>
+    <br>
+<div class="row">
+    <div class="col-8 offset-2">
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation"enctype="multipart/form-data">
+        
+        <div class="mb-3">
+        <label for="title" class="form-label">Product name</label>
+        <input name="listing[name]" value="<%= listing.name %>" class="form-control" required>
+        <div class="invalid-feedback">Please enter a valid name</div>
+        </div>
+
+        <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input name="listing[description]" value="<%= listing.description %>" class="form-control e-des" required>
+        <div class="invalid-feedback">Please enter a valid description</div>
+        </div>
+         <div class="mb-3">
+            <p>Previous Image</p>
+            <img src="<%= original_img %>" class="card-img-top rounded-3" alt="Listing Image" style="height: 300px; object-fit: cover; width: 300px;">
+         </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload New Image</label>
+            <input name="listing[image]" value="<%= listing.image %>" class="form-control e-des"type="file">
+            <div class="invalid-feedback">Please enter a valid Image Link</div>
+        </div>
+        <div class="row">
+        <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Points</label>
+        <input name="listing[points]" value="<%= listing.points %>" class="form-control" required type="number">
+        <div class="invalid-feedback">Please enter a valid points</div>
+        </div>
+         <div class="mb-3 col-md-8">
+    <label for="category" class="form-label">Category</label>
+    <select name="listing[category]" class="form-select" required>
+      <option value="" disabled selected>Select category</option>
+      <option value="T-Shirts">T-Shirts</option>
+      <option value="Shirts">Shirts</option>
+      <option value="Trousers">Trousers</option>
+      <option value="Jeans">Jeans</option>
+      <option value="Hoodie">Hoodie</option>
+      <option value="Footwear">Footwear</option>
+      
+    </select>
+  </div>
+
+         <div class="mb-3 col-md-4">
+        <label for="location" class="form-label">Location</label>
+        <input name="listing[location]" value="<%= listing.location %>" placeholder="Vadodara, Gujarat" class="form-control" required>
+        <div class="invalid-feedback">Please enter a valid location</div>
+    </div>
+    
+        </div>
+        <button class="btn btn-danger rounded-pill px-4 py-2 mb-3"> Done </button>
+    </form>
+    </div>
+</div>
+</body>
